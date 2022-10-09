@@ -10,6 +10,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoriaDemedicamentoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MedicamentoController;
+use App\Http\Controllers\RazaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,5 @@ Route::group(['middleware' => ['auth']], function() {
     //Route::resource('blogs', BlogController::class);
     Route::resource('categoriaDeMedicamentos', CategoriaDemedicamentoController::class);
     Route::resource('medicamentos', MedicamentoController::class);
+    Route::resource('razas', RazaController::class);
 });

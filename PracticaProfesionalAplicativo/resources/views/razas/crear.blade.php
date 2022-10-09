@@ -3,17 +3,17 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h3 class="page__heading">Editar Blog</h3>
+            <h3 class="page__heading" style="color: #000000;">Crear razas</h3>
         </div>
         <div class="section-body">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-body">                            
-                   
+                        <div class="card-body">     
+                                                                      
                         @if ($errors->any())                                                
                             <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                            <strong>¡Revise los campos!</strong>                        
+                            <strong>¡Por favor revise los campos!</strong>                        
                                 @foreach ($errors->all() as $error)                                    
                                     <span class="badge badge-danger">{{ $error }}</span>
                                 @endforeach                        
@@ -23,29 +23,39 @@
                             </div>
                         @endif
 
-
-                    <form action="{{ route('blogs.update',$blog->id) }}" method="POST">
+                    <form action="{{ route('razas.store') }}" method="POST">
                         @csrf
-                        @method('PUT')
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                   <label for="titulo">Título</label>
-                                   <input type="text" name="titulo" class="form-control" value="{{ $blog->titulo }}">
+                                   <label for="nombreRaza">Nombre de la raza</label>
+                                   <input type="text" name="nombreRaza" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                   <label for="pesoPromNac">Peso promedio de nacimiento</label>
+                                   <input type="number" name="pesoPromNac" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                   <label for="pesoMaxAdulto">Peso máximo de animal adulto</label>
+                                   <input type="number" name="pesoMaxAdulto" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                                     
                                 <div class="form-floating">
-                                <label for="contenido">Contenido</label>
-                                <textarea class="form-control" name="contenido" style="height: 100px">{{ $blog->contenido }}</textarea>                                
+                                <label for="observaciones">Descripción</label>
+                                <textarea class="form-control" name="observaciones" style="height: 100px"></textarea>
                                 
-                                </div>
-                            <br>
+                                </div><br>
+                            
                             <button type="submit" class="btn btn-primary">Guardar</button>                            
                         </div>
                     </form>
-
+                    
                         </div>
                     </div>
                 </div>
