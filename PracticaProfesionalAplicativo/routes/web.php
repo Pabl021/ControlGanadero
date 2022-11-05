@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalVacunadoController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -8,9 +9,12 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoriaDemedicamentoController;
+use App\Http\Controllers\EnfermedadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\RazaController;
+use App\Http\Controllers\RegistroAnimalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +48,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('categoriaDeMedicamentos', CategoriaDemedicamentoController::class);
     Route::resource('medicamentos', MedicamentoController::class);
     Route::resource('razas', RazaController::class);
+    Route::resource('enfermedades', EnfermedadController::class);
+    Route::resource('registrosAnimales', RegistroAnimalController::class);
+    Route::resource('animalesVacunados', AnimalVacunadoController::class);
 });

@@ -52,7 +52,6 @@
 
                                     </div>
 
-                                    <!-- <option value="{{$med->id}}" @if (old('id') == "$med->id") {{ 'selected'}}   @endif>{{$med->nombreCategoria}}</option> -->
 
                                 </div>
 

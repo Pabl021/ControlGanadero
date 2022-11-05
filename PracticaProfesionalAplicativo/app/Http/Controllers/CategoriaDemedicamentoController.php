@@ -100,6 +100,7 @@ class CategoriaDemedicamentoController extends Controller
      */
     public function destroy(CategoriaDeMedicamento $categoriaDeMedicamento)
     {
+        dd($categoriaDeMedicamento);
         $categoriaDeMedicamento->delete();
         return redirect()->route('categoriaDeMedicamentos.index');
     }

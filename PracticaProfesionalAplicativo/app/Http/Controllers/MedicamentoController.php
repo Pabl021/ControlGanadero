@@ -33,7 +33,7 @@ class MedicamentoController extends Controller
      */
     public function create()
     {
-        $medicamentos = CategoriaDeMedicamento::all();;
+        $medicamentos = CategoriaDeMedicamento::all();
 
         return view('medicamentos.crear',compact('medicamentos'));
     }

@@ -17,17 +17,20 @@
     <a class="nav-link" href="/razas" style="background-color: #9AA49F;">
         <i class=" fas fa-paw" style="color: black;"></i><span style="color: black;">Raza</span>
     </a>
-    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+    <a class="nav-link" href="/enfermedades" style="background-color: #9AA49F;">
         <i class=" fas fa-disease" style="color: black;"></i><span style="color: black;">Enfermedades</span>
     </a>
-    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+    <a class="nav-link" href="/animalesVacunados" style="background-color: #9AA49F;">
         <i class=" fas fa-syringe" style="color: black;"></i><span style="color: black;">Animales vacunados</span>
     </a>
-    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+    <a class="nav-link" href="/registrosAnimales" style="background-color: #9AA49F;">
         <i class=" fas fa-book" style="color: black;"></i><span style="color: black;">Registrar animal</span>
     </a>
     <a class="nav-link" href="/" style="background-color: #9AA49F;">
         <i class="fas fa-hand-scissors" style="color: black;"></i><span style="color: black;">Animales preñados</span>
+    </a>
+    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+        <i class="fas fa-chart-line" style="color: black;"></i><span style="color: black;">Animales en venta</span>
     </a>
     <a class="nav-link" href="/" style="background-color: #9AA49F;">
         <i class="fas fa-chart-line" style="color: black;"></i><span style="color: black;">Reportería</span>
