@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalPreniadoController;
 use App\Http\Controllers\AnimalVacunadoController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -51,4 +52,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('enfermedades', EnfermedadController::class);
     Route::resource('registrosAnimales', RegistroAnimalController::class);
     Route::resource('animalesVacunados', AnimalVacunadoController::class);
+    Route::resource('animalesPreniados', AnimalPreniadoController::class);
+    
 });

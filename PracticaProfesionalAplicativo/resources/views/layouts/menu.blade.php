@@ -26,7 +26,7 @@
     <a class="nav-link" href="/registrosAnimales" style="background-color: #9AA49F;">
         <i class=" fas fa-book" style="color: black;"></i><span style="color: black;">Registrar animal</span>
     </a>
-    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+    <a class="nav-link" href="/animalesPreniados" style="background-color: #9AA49F;">
         <i class="fas fa-hand-scissors" style="color: black;"></i><span style="color: black;">Animales preñados</span>
     </a>
     <a class="nav-link" href="/" style="background-color: #9AA49F;">
