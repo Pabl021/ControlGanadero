@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GanadoEnVenta;
 use Illuminate\Http\Request;
-use App\Models\Raza;
 use App\Models\RegistroAnimal;
 use IIlluminate\Support\Facades\DB;
 
-
-
-class RegistroAnimalController  extends Controller
+class GanadoEnVentaController extends Controller
 {
-
     function __construct()
     {
-        $this->middleware('permission:ver-registroAnimal|crear-registroAnimal|editar-registroAnimal|borrar-registroAnimal', ['only' => ['index']]);
-        $this->middleware('permission:crear-registroAnimal', ['only' => ['create', 'store']]);
-        $this->middleware('permission:editar-registroAnimal', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:borrar-registroAnimal', ['only' => ['destroy']]);
+         $this->middleware('permission:admin-crearUsuario', ['only' => ['index']]);
+        
     }
     /**
      * Display a listing of the resource.
@@ -26,8 +21,8 @@ class RegistroAnimalController  extends Controller
      */
     public function index()
     {
-        $registrosAnimales = RegistroAnimal::paginate(5);
-        return view('registrosAnimales.index', compact('registrosAnimales'));
+        $ganadosEnVenta = GanadoEnVenta::paginate(5);
+        return view('ganadosEnVenta.index',compact('ganadosEnVenta'));
     }
 
     /**
@@ -37,8 +32,8 @@ class RegistroAnimalController  extends Controller
      */
     public function create()
     {
-        $raza = Raza::all();
-        return view('registrosAnimales.crear', compact('raza'));
+        $registroAnimal = RegistroAnimal::All();
+        return view('ganadosEnVenta.crear', compact('registroAnimal'));
     }
 
     /**
@@ -50,29 +45,36 @@ class RegistroAnimalController  extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'nombreAnimal' => 'required',
-            'fechaDeNacimiento' => 'required',
-            'genero' => 'required',
+            'nombreAnimal'=> 'required',
             'peso' => 'required',
             'raza' => 'required',
-            'enVenta' => 'required',
-            'vendido' => 'required',
-            'estado' => 'required',
-            'descripcion',
-            'imagen' 
-
+            'genero'=> 'required',
+            'precioDeVenta' => 'required',
+            'fechaDeVenta' => 'required',
+            'nombreNuevoDuenio' => 'required',
+            'observaciones' => 'required',
+            'imagen' => 'required'
+            
         ]);
-
+       
         $animal = $request->all();
+       
 
         if ($imagen = $request->file('imagen')) {
-            $rutaGuardarImg = 'imagen/';
+            
+           
+            $rutaGuardarImg = 'imagenEnVenta/';
             $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($rutaGuardarImg, $imagenProducto);
             $animal['imagen'] = "$imagenProducto";
+                      
         }
-        RegistroAnimal::create($animal);
-        return redirect()->route('registrosAnimales.index');
+        
+        GanadoEnVenta::create($animal);
+        return redirect()->route('ganadosEnVenta.index');
+
+
+   
     }
 
     /**
@@ -83,8 +85,7 @@ class RegistroAnimalController  extends Controller
      */
     public function show($id)
     {
-        $animal  = RegistroAnimal::find($id);
-        return $animal;
+        //
     }
 
     /**
@@ -95,9 +96,9 @@ class RegistroAnimalController  extends Controller
      */
     public function edit($id)
     {
-        $registroAnimal  = RegistroAnimal::find($id);
-        $raza = Raza::all();
-        return view('registrosAnimales.editar', compact('registroAnimal', 'raza'));
+        $registroAnimal = RegistroAnimal::All();
+        $ganadoEnVenta  = GanadoEnVenta::find($id);
+        return view('ganadosEnVenta.editar', compact('ganadoEnVenta','registroAnimal'));
     }
 
     /**
@@ -110,35 +111,35 @@ class RegistroAnimalController  extends Controller
     public function update(Request $request, $id)
     {
         request()->validate([
-            'nombreAnimal' => 'required',
-            'fechaDeNacimiento' => 'required',
-            'genero' => 'required',
+            'nombreAnimal'=> 'required',
             'peso' => 'required',
             'raza' => 'required',
-            'enVenta' => 'required',
-            'vendido' => 'required',
-            'estado' => 'required',
-            'descripcion',
-            'imagen' 
-
+            'genero'=> 'required',
+            'precioDeVenta' => 'required',
+            'fechaDeVenta' => 'required',
+            'nombreNuevoDuenio' => 'required',
+            'observaciones' => 'required',
+            'imagen'
+            
         ]);
-
         $animal = $request->all();
 
-        if ($imagen = $request->file('imagen')) {            
-            $rutaGuardarImg = 'imagen/';
+        if ($imagen = $request->file('imagen')) {
+          
+            $rutaGuardarImg = 'imagenEnVenta/';
             $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($rutaGuardarImg, $imagenProducto);
             $animal['imagen'] = "$imagenProducto";
-            
         }else{
             unset($animal['imagen']);
-           
+            
         }
-        $data  = RegistroAnimal::find($id);
-        $data->update($animal);
        
-        return redirect()->route('registrosAnimales.index');
+        $ganadoEnVenta  = GanadoEnVenta::find($id);
+        $ganadoEnVenta->update($animal);
+        return redirect()->route('ganadosEnVenta.index');
+
+
 
 
 
@@ -152,11 +153,9 @@ class RegistroAnimalController  extends Controller
      */
     public function destroy($id)
     {
-        $registroAnimal  = RegistroAnimal::find($id);
-        $registroAnimal->delete();
-        return redirect()->route('registrosAnimales.index');
+        $ganadoEnVenta  = GanadoEnVenta::find($id);
+        $ganadoEnVenta->delete();
+        return redirect()->route('ganadosEnVenta.index');
     }
-
-
 
 }

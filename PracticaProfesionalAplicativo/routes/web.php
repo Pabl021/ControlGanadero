@@ -11,11 +11,12 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoriaDemedicamentoController;
 use App\Http\Controllers\EnfermedadController;
+use App\Http\Controllers\GanadoEnVentaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\RazaController;
 use App\Http\Controllers\RegistroAnimalController;
-
+use App\Http\Controllers\VerAnimalesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,5 +54,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('registrosAnimales', RegistroAnimalController::class);
     Route::resource('animalesVacunados', AnimalVacunadoController::class);
     Route::resource('animalesPreniados', AnimalPreniadoController::class);
-    
+    Route::resource('ganadosEnVenta', GanadoEnVentaController::class);
+    Route::resource('verAnimales', VerAnimalesController::class);
 });

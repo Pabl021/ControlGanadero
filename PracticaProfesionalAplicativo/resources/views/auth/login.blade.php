@@ -65,11 +65,8 @@ Login
                     Iniciar Sesión
                 </button>
        
-                
-                <button style="color: white; font-weight:bold; font-size: 20px" type="submit" class="btn btn-dark btn-lg btn-block" tabindex="4">
-                    Ganado en venta
-                </button>
-              
+                <a href="verAnimales" style="color: white; font-weight:bold; font-size: 20px" class="btn btn-dark btn-lg btn-block" >Ganado en venta</a>
+               
             </div>
         </form>
 
