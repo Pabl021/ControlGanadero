@@ -9,4 +9,11 @@ class RegistroAnimal extends Model
 {
     use HasFactory;
     protected $fillable = ['nombreAnimal', 'fechaDeNacimiento','genero','peso','raza','enVenta','vendido','estado','descripcion','imagen'];
+
+    public function getRaza(){
+        $nombreRaza = Raza::find($this->raza);
+        return $nombreRaza;
+    }
+
 }
+

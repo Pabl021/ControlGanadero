@@ -34,9 +34,9 @@
                                 @foreach ($ganadosEnVenta as $ganVen)
                                 <tr>
                                 <td style="display: none;">{{ $ganVen->id }}</td>                                
-                                <td>{{ $ganVen->nombreAnimal }}</td>
+                                <td>{{ $ganVen->getNombreAnimal()->nombreAnimal }}</td>
                                 <td>{{ $ganVen->peso }}</td>
-                                <td>{{ $ganVen->raza }}</td>
+                                <td>{{ $ganVen->getRaza()->nombreRaza }}</td>
                                 <td>{{ $ganVen->precioDeVenta }}</td>
                                 <td>{{ $ganVen->fechaDeVenta }}</td>
                                 <td>{{ $ganVen->nombreNuevoDuenio }}</td>

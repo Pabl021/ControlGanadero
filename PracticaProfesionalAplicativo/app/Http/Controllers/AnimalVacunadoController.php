@@ -23,10 +23,12 @@ class AnimalVacunadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $animalesVacunados = AnimalVacunado::paginate(5);
-        return view('animalesVacunados.index',compact('animalesVacunados'));
+        $buscar = $request->get('buscar');
+
+        $animalesVacunados = AnimalVacunado::where('nombreAnimal','like','%'.$buscar.'%')->orwhere('efectosSecundarios','like','%'.$buscar.'%')->get();
+        return view('animalesVacunados.index',compact('animalesVacunados','buscar'));
     }
 
     /**

@@ -32,7 +32,7 @@
                                 @foreach ($animalesPreniados as $aniPre)
                                 <tr>
                                 <td style="display: none;">{{ $aniPre->id }}</td>                                
-                                <td>{{ $aniPre->nombreAnimal }}</td>
+                                <td>{{ $aniPre->getNombreAnimal()->nombreAnimal }}</td>
                                 <td>{{ $aniPre->fechapreniado }}</td>
                                 <td>{{ $aniPre->madreMurioEnParto }}</td>
                                 <td>{{ $aniPre->cantidadDeNacidos }}</td>

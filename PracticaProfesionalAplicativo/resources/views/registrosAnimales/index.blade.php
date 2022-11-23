@@ -39,7 +39,7 @@
                                 <td>{{ $regAni->fechaDeNacimiento }}</td>
                                 <td>{{ $regAni->genero }}</td>
                                 <td>{{ $regAni->peso }}</td>
-                                <td>{{ $regAni->raza }}</td>
+                                <td>{{ $regAni->getRaza()->nombreRaza }}</td>
                                 <td>{{ $regAni->enVenta }}</td>
                                 <td>{{ $regAni->vendido }}</td>
                                 <td>{{ $regAni->estado }}</td>

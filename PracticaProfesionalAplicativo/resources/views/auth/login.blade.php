@@ -64,13 +64,12 @@ Login
                 <button style="color: white; font-weight:bold; font-size: 20px" type="submit" class="btn btn-success btn-lg btn-block" tabindex="4">
                     Iniciar Sesión
                 </button>
-       
-                <a href="verAnimales" style="color: white; font-weight:bold; font-size: 20px" class="btn btn-dark btn-lg btn-block" >Ganado en venta</a>
-               
+                      
             </div>
         </form>
 
-        
+        <a href="verAnimales/index" style="color: white; font-weight:bold; font-size: 20px" class="btn btn-dark btn-lg btn-block" >Ganado en venta</a>
+ 
     </div>
 </div>
 @endsection

@@ -21,7 +21,7 @@
         <i class=" fas fa-disease" style="color: black;"></i><span style="color: black;">Enfermedades</span>
     </a>
     <a class="nav-link" href="/animalesVacunados" style="background-color: #9AA49F;">
-        <i class=" fas fa-syringe" style="color: black;"></i><span style="color: black;">Animales vacunados</span>
+        <i class=" fas fa-syringe" style="color: black;"></i><span style="color: black;">Control de salud animal</span>
     </a>
     <a class="nav-link" href="/registrosAnimales" style="background-color: #9AA49F;">
         <i class=" fas fa-book" style="color: black;"></i><span style="color: black;">Registrar animal</span>

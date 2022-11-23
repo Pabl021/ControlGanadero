@@ -9,4 +9,10 @@ class Medicamento extends Model
 {
     use HasFactory;
     protected $fillable = ['nombreMedicamento', 'nombreCategoria','via','dosis','observaciones'];
+
+    public function getCategoria(){
+        $cat = CategoriaDeMedicamento::find($this->nombreCategoria);
+        return $cat;
+    }
 }
+

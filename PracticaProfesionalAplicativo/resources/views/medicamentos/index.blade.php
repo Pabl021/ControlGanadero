@@ -30,7 +30,7 @@
                             <tr>
                                 <td style="display: none;">{{ $medi->id }}</td>                                
                                 <td>{{ $medi->nombreMedicamento }}</td>
-                                <td>{{ $medi->nombreCategoria }}</td>
+                                <td>{{ $medi->getCategoria()->nombreCategoria }}</td>
                                 <td>{{ $medi->via }}</td>
                                 <td>{{ $medi->dosis }}</td>
                                 <td>{{ $medi->observaciones }}</td>

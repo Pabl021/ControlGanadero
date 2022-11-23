@@ -9,4 +9,10 @@ class AnimalPreniado extends Model
 {
     use HasFactory;
     protected $fillable = ['nombreAnimal','fechapreniado','madreMurioEnParto','cantidadDeNacidos','descripcion'];
+
+    public function getNombreAnimal(){
+        $nombreAni = RegistroAnimal::find($this->nombreAnimal);
+        return $nombreAni;
+    }
+    
 }
