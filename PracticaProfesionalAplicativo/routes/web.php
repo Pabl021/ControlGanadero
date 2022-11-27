@@ -16,6 +16,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\RazaController;
 use App\Http\Controllers\RegistroAnimalController;
+use App\Http\Controllers\ReporteriaController;
 use App\Http\Controllers\VerAnimalesController;
 
 /*
@@ -56,4 +57,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('animalesPreniados', AnimalPreniadoController::class);
     Route::resource('ganadosEnVenta', GanadoEnVentaController::class);
     Route::resource('verAnimales', VerAnimalesController::class);
+    Route::resource('reporteria', ReporteriaController::class);
 });

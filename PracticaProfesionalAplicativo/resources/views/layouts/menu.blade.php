@@ -35,7 +35,7 @@
     <a class="nav-link" href="/verAnimales" style="background-color: #9AA49F;">
         <i class="fas fa-eye" style="color: black;"></i><span style="color: black;">Ver animales en venta</span>
     </a>
-    <a class="nav-link" href="/" style="background-color: #9AA49F;">
+    <a class="nav-link" href="/reporteria" style="background-color: #9AA49F;">
         <i class="fas fa-chart-line" style="color: black;"></i><span style="color: black;">Reportería</span>
     </a>
 
