@@ -74,28 +74,28 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12"  style="display: none">
                                     <div class="form-group">
                                         <label for="enVenta">En venta</label>
                                         <select required name="enVenta" class="form-control" value="" autocomplete="off" autofocus>
                                             <option value="" selected disabled>Seleccionar una opción</option>
 
                                             <option value="Si">Si</option>
-                                            <option value="No">No</option>
+                                            <option selected value="No">No</option>
 
                                         </select>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="display: none">
                                     <div class="form-group">
                                         <label for="vendido">Vendido</label>
                                         <select required name="vendido" class="form-control" value="" autocomplete="off" autofocus>
                                             <option value="" selected disabled>Seleccionar una opción</option>
 
                                             <option value="Si">Si</option>
-                                            <option value="No">No</option>
+                                            <option selected value="No">No</option>
 
                                         </select>
 

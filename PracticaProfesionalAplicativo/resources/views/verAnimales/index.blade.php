@@ -22,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
 
-                                        <img class="img-fluid " src="/imagenEnVenta/{{$verAni->imagen}}">
+                                        <img class="img-fluid " src="/imagenEnVenta/{{$verAni->imagen}}" width="50%" height="50%">
                                     </div>
                                     <div class="col-md-8">
                                         <!-- <div class="card-body"> -->

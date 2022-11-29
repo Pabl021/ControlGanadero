@@ -56,6 +56,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('animalesVacunados', AnimalVacunadoController::class);
     Route::resource('animalesPreniados', AnimalPreniadoController::class);
     Route::resource('ganadosEnVenta', GanadoEnVentaController::class);
-    Route::resource('verAnimales', VerAnimalesController::class);
+    
     Route::resource('reporteria', ReporteriaController::class);
 });
+
+Route::resource('verAnimales', VerAnimalesController::class);

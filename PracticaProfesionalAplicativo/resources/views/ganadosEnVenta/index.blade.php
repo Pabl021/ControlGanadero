@@ -23,8 +23,7 @@
                                     <th style="color:#000000;">Peso</th> 
                                     <th style="color:#000000;">Raza</th>     
                                     <th style="color:#000000;">Precio de venta</th> 
-                                    <th style="color:#000000;">Fecha de venta</th> 
-                                    <th style="color:#000000;">Nombre nuevo dueño</th>     
+                                    <th style="color:#000000;">Fecha de venta</th>     
                                     <th style="color:#000000;">Observaciones</th> 
                                     <th style="color:#000000;">Imagen</th> 
                                             
@@ -38,8 +37,7 @@
                                 <td>{{ $ganVen->peso }}</td>
                                 <td>{{ $ganVen->getRaza()->nombreRaza }}</td>
                                 <td>{{ $ganVen->precioDeVenta }}</td>
-                                <td>{{ $ganVen->fechaDeVenta }}</td>
-                                <td>{{ $ganVen->nombreNuevoDuenio }}</td>
+                                <td>{{ $ganVen->fechaDeVenta }}</td>                              
                                 <td>{{ $ganVen->observaciones }}</td>
                                 
                                 <td><img id="imagen" src="/imagenEnVenta/{{$ganVen->imagen}}" width="60%"></td>

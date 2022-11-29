@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="display: none">
                                     <div class="form-group">
                                         <label for="enVenta">En venta</label>
                                         <select required name="enVenta" class="form-control" value="" autocomplete="off" autofocus>
@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="display: none">
                                     <div class="form-group">
                                         <label for="vendido">Vendido</label>
                                         <select required name="vendido" class="form-control" value="" autocomplete="off" autofocus>

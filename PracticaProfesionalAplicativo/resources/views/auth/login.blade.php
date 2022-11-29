@@ -68,7 +68,7 @@ Login
             </div>
         </form>
 
-        <a href="verAnimales/index" style="color: white; font-weight:bold; font-size: 20px" class="btn btn-dark btn-lg btn-block" >Ganado en venta</a>
+        <a href="verAnimales" style="color: white; font-weight:bold; font-size: 20px" class="btn btn-dark btn-lg btn-block" >Ganado en venta</a>
  
     </div>
 </div>

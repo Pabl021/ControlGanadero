@@ -23,11 +23,8 @@
                                     <th style="color:#000000;">Fecha de nacimiento</th> 
                                     <th style="color:#000000;">Genero</th>     
                                     <th style="color:#000000;">Peso</th>   
-                                    <th style="color:#000000;">Raza</th> 
-                                    <th style="color:#000000;">En venta</th> 
-                                    <th style="color:#000000;">Vendido</th>     
+                                    <th style="color:#000000;">Raza</th>     
                                     <th style="color:#000000;">Estado</th>  
-                                    <!-- <th style="color:#000000;">Descripción</th>   -->
                                     <th style="color:#000000;">Imagen</th>         
                                     <th style="color:#000000;">Acciones</th>                                                                   
                               </thead>
@@ -40,11 +37,8 @@
                                 <td>{{ $regAni->genero }}</td>
                                 <td>{{ $regAni->peso }}</td>
                                 <td>{{ $regAni->getRaza()->nombreRaza }}</td>
-                                <td>{{ $regAni->enVenta }}</td>
-                                <td>{{ $regAni->vendido }}</td>
                                 <td>{{ $regAni->estado }}</td>
-                                <!-- <td>{{ $regAni->descripcion }}</td> -->
-                                <td><img src="/imagen/{{$regAni->imagen}}" width="60%"></td>
+                                <td><img src="/imagen/{{$regAni->imagen}}" width="40%"></td>
                                     <td>
                                         <form action="{{ route('registrosAnimales.destroy',$regAni->id) }}" method="POST">
 

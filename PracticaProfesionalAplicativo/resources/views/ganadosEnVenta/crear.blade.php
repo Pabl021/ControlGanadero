@@ -74,10 +74,10 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-12 col-sm-12 col-md-12" style="display: none">
                                 <div class="form-group">
                                     <label for="nombreNuevoDuenio">Nombre del nuevo dueño</label>
-                                    <input type="text" name="nombreNuevoDuenio" class="form-control">
+                                    <input type="text" name="nombreNuevoDuenio" class="form-control" value="Finca T. Del Bosque">
                                 </div>
                             </div>
 
